@@ -1,0 +1,366 @@
+/**
+ * @license
+ * Copyright 2012 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* Core Blockly CSS */
+
+.blocklySvg {
+  background-color: #000000;
+  outline: none;
+  overflow: hidden;
+  display: block;
+}
+
+.blocklyWidgetDiv {
+  display: none;
+  position: absolute;
+  z-index: 99999;
+}
+
+.injectionDiv {
+  height: 100%;
+  position: relative;
+  touch-action: none;
+}
+
+.blocklyNonSelectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.blocklyWsDragSurface {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blocklyWsDragSurface.blocklyWsDragSurfaceActive {
+  display: block;
+}
+
+.blocklyBlockDragSurface {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible !important;
+  z-index: 50;
+}
+
+.blocklyBlockDragSurface.blocklyBlockDragSurfaceActive {
+  display: block;
+}
+
+.blocklyTooltipDiv {
+  background-color: #ffffc7;
+  border: 1px solid #ddd;
+  box-shadow: 4px 4px 20px 1px rgba(0,0,0,.15);
+  color: #000;
+  display: none;
+  font: 9pt sans-serif;
+  opacity: .9;
+  padding: 2px;
+  position: absolute;
+  z-index: 100000;
+}
+
+.blocklyResizeSE {
+  cursor: se-resize;
+  fill: #aaa;
+}
+
+.blocklyResizeSW {
+  cursor: sw-resize;
+  fill: #aaa;
+}
+
+.blocklyResizeLine {
+  stroke: #515A5A;
+  stroke-width: 1;
+}
+
+.blocklyHighlightedConnectionPath {
+  fill: none;
+  stroke: #fc3;
+  stroke-width: 4px;
+}
+
+.blocklyPathLight {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 1;
+}
+
+.blocklySelected>.blocklyPathLight {
+  display: none;
+}
+
+.blocklyPathDark {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 1;
+}
+
+.blocklySelected>.blocklyPathDark {
+  display: none;
+}
+
+.blocklyPath {
+  stroke-linecap: round;
+  stroke-width: 1;
+}
+
+.blocklySelected>.blocklyPath {
+  stroke: #fc3;
+  stroke-width: 3;
+}
+
+.blocklyDragging>.blocklyPath,
+.blocklyDragging>.blocklyPathLight,
+.blocklyDragging>.blocklyPathDark {
+  fill-opacity: .8;
+  stroke-opacity: .8;
+}
+
+.blocklyDragging>.blocklyPathDark {
+  display: none;
+}
+
+.blocklyDisabled>.blocklyPath {
+  fill-opacity: .5;
+  stroke-opacity: .5;
+}
+
+.blocklyDisabled>.blocklyPathLight,
+.blocklyDisabled>.blocklyPathDark {
+  display: none;
+}
+
+.blocklyInsertionMarker>.blocklyPath,
+.blocklyInsertionMarker>.blocklyPathLight,
+.blocklyInsertionMarker>.blocklyPathDark {
+  fill-opacity: .2;
+  stroke: none;
+}
+
+.blocklyMultilineText {
+  font-family: monospace;
+}
+
+.blocklyNonEditableText>text {
+  pointer-events: none;
+}
+
+.blocklyFlyout {
+  position: absolute;
+  z-index: 20;
+}
+
+.blocklyText text {
+  cursor: default;
+}
+
+.blocklySvg text {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: inherit;
+}
+
+.blocklyHidden {
+  display: none;
+}
+
+.blocklyFieldDropdown:not(.blocklyHidden) {
+  display: block;
+}
+
+.blocklyIconGroup {
+  cursor: default;
+}
+
+.blocklyIconGroup:not(:hover) .blocklyIconSymbol {
+  opacity: .6;
+}
+
+.blocklyIconSymbol {
+  cursor: pointer;
+  fill: #fff;
+  stroke: #fff;
+}
+
+.blocklyMinimalBody {
+  margin: 0;
+  padding: 0;
+}
+
+.blocklySvg {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.blocklyToolboxDiv {
+  background-color: #ddd;
+  overflow-x: visible;
+  overflow-y: auto;
+  position: absolute;
+}
+
+.blocklyTreeRoot {
+  padding: 4px 0;
+}
+
+.blocklyTreeIcon {
+  background-image: url("/node_modules/blockly/media//sprites.png");
+  height: 16px;
+  vertical-align: middle;
+  width: 16px;
+}
+
+.blocklyTreeIconClosedLtr {
+  background-position: -32px -1px;
+}
+
+.blocklyTreeIconClosedRtl {
+  background-position: 0 -1px;
+}
+
+.blocklyTreeIconOpen {
+  background-position: -16px -1px;
+}
+
+.blocklyTreeIconNone,
+.blocklyTreeIconNone:hover {
+  background-position: -48px -1px;
+}
+
+.blocklyTreeLabel {
+  cursor: default;
+  font: 16px sans-serif;
+  padding: 0 3px;
+  vertical-align: middle;
+}
+
+
+.blocklyTreeSelected>.blocklyTreeLabel {
+  color: #fff;
+}
+
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon {
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) repeat-x 0 -512px;
+}
+
+.blocklyWidgetDiv .goog-option-selected {
+  background-color: #d6e9f8;
+}
+
+.blocklyWidgetDiv .goog-menuitem {
+  color: #000;
+  font: normal 13px Arial, sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 4px 7em 4px 28px;
+  white-space: nowrap;
+}
+
+.blocklyWidgetDiv .goog-menuitem.goog-menuitem-rtl {
+  padding-left: 7em;
+  padding-right: 28px;
+}
+
+.blocklyWidgetDiv .goog-menu {
+  background: #fff;
+  border-color: #ccc #666 #666 #ccc;
+  border-style: solid;
+  border-width: 1px;
+  cursor: default;
+  font: normal 13px Arial, sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 4px 0;
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100%;
+  z-index: 20000;
+}
+
+.blocklyWidgetDiv .goog-menuitem-highlight,
+.blocklyWidgetDiv .goog-menuitem-hover {
+  background-color: #d6e9f8;
+  border-color: #d6e9f8;
+  border-style: dotted;
+  border-width: 1px 0;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.blocklyWidgetDiv .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-icon {
+  background-repeat: no-repeat;
+  height: 16px;
+  left: 6px;
+  position: absolute;
+  right: auto;
+  vertical-align: middle;
+  width: 16px;
+}
+
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-menuitem-rtl .goog-menuitem-icon {
+  left: auto;
+  right: 6px;
+}
+
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-checkbox,
+.blocklyWidgetDiv .goog-option-selected .goog-menuitem-icon {
+  background: url(//ssl.gstatic.com/editor/editortoolbar.png) repeat-x 0 -512px;
+}
+
+.blocklyWidgetDiv .goog-menuitem-disabled {
+  color: #ccc;
+}
+
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-icon {
+  opacity: 0.3;
+}
+
+.blocklyWidgetDiv .goog-menuitem-disabled .goog-menuitem-checkbox {
+  opacity: 0.3;
+}
+
+.blocklyWidgetDiv .goog-menuseparator {
+  border-top: 1px solid #ccc;
+  margin: 4px 0;
+  padding: 0;
+}
+
+.blocklyFlyoutButton {
+  fill: #888;
+  cursor: pointer;
+}
+
+.blocklyFlyoutButtonShadow {
+  fill: #666;
+}
+
+.blocklyFlyoutButton:hover {
+  fill: #aaa;
+}
+
+.blocklyFlyoutLabel {
+  cursor: default;
+}
+
+.blocklyFlyoutLabelBackground {
+  opacity: 0;
+}

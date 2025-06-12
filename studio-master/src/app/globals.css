@@ -1,0 +1,248 @@
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* Sophisticated Dark Blue & Gold Theme */
+    --background: 210 35% 15%;   /* Deep navy blue */
+    --foreground: 45 90% 85%;    /* Brighter gold text */
+    
+    --card: 210 40% 20%;         /* Slightly lighter navy */
+    --card-foreground: 45 90% 85%;
+    
+    --primary: 45 90% 70%;       /* Vibrant gold */
+    --primary-foreground: 210 50% 20%; /* Dark blue text on gold */
+    
+    --secondary: 210 60% 50%;    /* Bright blue */
+    --secondary-foreground: 0 0% 98%; /* Near-white text */
+    
+    --accent: 30 85% 65%;        /* Orange accent */
+    --accent-foreground: 0 0% 98%;
+    
+    --muted: 210 30% 25%;        /* Muted navy */
+    --muted-foreground: 45 70% 80%; /* Lighter gold */
+    
+    --border: 210 30% 35%;       /* Blue-gray border */
+    --input: 210 40% 20%;
+    --input-border: 210 30% 40%;
+    --ring: 45 90% 70%;          /* Gold focus ring */
+    --radius: 0.5rem;
+
+    /* Text Colors */
+    --text-heading: 45 90% 85%;
+    --text-body: 210 20% 90%;
+    --text-code: 45 90% 85%;
+
+    /* Chart Colors */
+    --chart-1: 45 90% 70%;       /* Gold */
+    --chart-2: 210 60% 50%;      /* Blue */
+    --chart-3: 30 85% 65%;       /* Orange */
+    --chart-4: 0 80% 65%;        /* Red */
+    --chart-5: 120 60% 55%;      /* Green */
+
+    /* Sidebar */
+    --sidebar-background: 210 45% 12%;
+    --sidebar-foreground: 45 90% 85%;
+    --sidebar-primary: 45 90% 70%;
+    --sidebar-primary-foreground: 210 50% 20%;
+    --sidebar-accent: 30 85% 65%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 40% 20%;
+  }
+
+  .light {
+    /* Light mode alternative */
+    --background: 210 30% 95%;
+    --foreground: 210 50% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 20%;
+    --primary: 45 90% 60%;
+    --primary-foreground: 210 50% 20%;
+    --secondary: 210 90% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 30 85% 55%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 210 20% 90%;
+    --muted-foreground: 210 30% 40%;
+    --border: 210 20% 80%;
+    --input: 0 0% 100%;
+    --input-border: 210 20% 75%;
+    --ring: 210 90% 50%;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+  
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--text-body));
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--text-heading));
+    font-weight: 600;
+  }
+
+  code, pre {
+    color: hsl(var(--text-code));
+    background-color: hsl(210 40% 20%);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: 'Consolas', monospace;
+  }
+}
+
+/* Blockly Customizations */
+.blocklyToolboxDiv {
+  background-color: hsl(var(--sidebar-background));
+  border-right: 1px solid hsl(var(--sidebar-border));
+  padding: 1rem;
+}
+
+.blocklyTreeLabel {
+  color: hsl(var(--sidebar-foreground));
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  padding: 0.5rem 0;
+}
+
+.blocklyBlockBackground {
+  fill: hsl(var(--primary));
+  stroke: hsl(var(--primary-foreground));
+  stroke-width: 2px;
+  rx: 8px;
+  ry: 8px;
+}
+
+.blocklyText {
+  fill: hsl(var(--primary-foreground));
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Category-specific block colors */
+.logic-blocks > .blocklyPath {
+  fill: hsl(var(--chart-2)); /* Blue */
+}
+.loop-blocks > .blocklyPath {
+  fill: hsl(var(--chart-3)); /* Orange */
+}
+.math-blocks > .blocklyPath {
+  fill: hsl(var(--chart-1)); /* Gold */
+}
+.text-blocks > .blocklyPath {
+  fill: hsl(var(--chart-5)); /* Green */
+}
+.variable-blocks > .blocklyPath {
+  fill: hsl(var(--chart-4)); /* Red */
+}
+
+/* UI Components */
+.button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  
+}
+
+.button:hover {
+  background-color: hsl(10 90% 65%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Workspace Styling */
+.blockly-workspace {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  background-image: 
+    linear-gradient(hsl(var(--background)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--background)) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Connection Highlights */
+.blocklyHighlightedConnectionPath {
+  stroke: hsl(var(--accent));
+  stroke-width: 3px;
+}
+
+/* Input Fields */
+input, textarea, select {
+  background-color: hsl(var(--input));
+  color: hsl(var(--primary-foreground));
+  border: 1px solid hsl(var(--input-border));
+  border-radius: calc(var(--radius) - 0.2rem);
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+}
+
+/* Toolbox Items */
+.toolbox-item {
+  background-color: hsl(var(--card));
+  color: hsl(var(--sidebar-foreground));
+  border-left: 4px solid hsl(var(--primary));
+  border-radius: calc(var(--radius) - 0.2rem);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  cursor: grab;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.toolbox-item:hover {
+  background-color: hsl(var(--primary) / 0.1);
+  transform: translateX(4px);
+}
+
+/* Python Preview */
+.python-preview {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.python-preview pre {
+  background-color: hsl(210 40% 20%);
+  color: hsl(45 90% 85%);
+  padding: 1rem;
+  border-radius: calc(var(--radius) - 0.2rem);
+  overflow: auto;
+  max-height: 300px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .blocklyTreeLabel {
+    font-size: 13px;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

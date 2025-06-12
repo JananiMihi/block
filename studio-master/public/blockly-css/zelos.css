@@ -1,0 +1,277 @@
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/* Zelos theme for Blockly */
+
+.blocklyFlyout {
+  fill: #f9f9f9;
+  fill-opacity: 0.95;
+}
+
+.blocklyFlyoutButton {
+  fill: #c1c1c1;
+}
+
+.blocklyFlyoutButtonShadow {
+  fill: #9e9e9e;
+}
+
+.blocklyFlyoutBackground {
+  fill: #f9f9f9;
+  fill-opacity: 0.95;
+}
+
+.blocklyColourflyout {
+  fill: #f9f9f9;
+  fill-opacity: 0.95;
+  stroke: #c6c6c6;
+  stroke-width: 1;
+}
+
+.blocklyScrollbarBackground {
+  opacity: 0;
+}
+
+.blocklyScrollbarHandle {
+  fill: #ccc;
+}
+
+.blocklyScrollbarBackground:hover+.blocklyScrollbarHandle,
+.blocklyScrollbarHandle:hover {
+  fill: #bbb;
+}
+
+.blocklyZoom>image {
+  opacity: 0.4;
+}
+
+.blocklyZoom>image:hover {
+  opacity: 0.6;
+}
+
+.blocklyZoom>image:active {
+  opacity: 0.8;
+}
+
+/* Connection highlight colours for Zelos theme */
+.blocklyHighlightedConnectionPath {
+  stroke: #4d90fe;
+  stroke-width: 3px;
+}
+
+.blocklySelected > .blocklyPath {
+  stroke: #4d90fe;
+  stroke-width: 3px;
+}
+
+/* Block colours and styling for Zelos theme */
+.blocklyDragging > .blocklyPath {
+  fill-opacity: 0.8;
+  stroke-opacity: 0.8;
+}
+
+.blocklySelected > .blocklyPathLight {
+  display: none;
+}
+
+.blocklySelected > .blocklyPathDark {
+  display: none;
+}
+
+.blocklyDragging > .blocklyPathDark {
+  display: none;
+}
+
+/* Zelos block styling */
+.zelos-renderer .blocklyPath {
+  stroke: none;
+}
+
+.zelos-renderer .blocklyPathLight {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.zelos-renderer .blocklyPathDark {
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.zelos-renderer .blocklySelected > .blocklyPath {
+  stroke: #4d90fe;
+  stroke-width: 3px;
+}
+
+.zelos-renderer .blocklySelected > .blocklyPathLight {
+  display: none;
+}
+
+.zelos-renderer .blocklySelected > .blocklyPathDark {
+  display: none;
+}
+
+.zelos-renderer .blocklyDragging > .blocklyPath {
+  fill-opacity: 0.8;
+}
+
+.zelos-renderer .blocklyDragging > .blocklyPathLight {
+  stroke-opacity: 0.6;
+}
+
+.zelos-renderer .blocklyDragging > .blocklyPathDark {
+  display: none;
+}
+
+.zelos-renderer .blocklyDisabled > .blocklyPath {
+  fill-opacity: 0.5;
+}
+
+.zelos-renderer .blocklyDisabled > .blocklyPathLight {
+  display: none;
+}
+
+.zelos-renderer .blocklyDisabled > .blocklyPathDark {
+  display: none;
+}
+
+.zelos-renderer .blocklyInsertionMarker > .blocklyPath {
+  fill-opacity: 0.2;
+  stroke: none;
+}
+
+.zelos-renderer .blocklyInsertionMarker > .blocklyPathLight {
+  display: none;
+}
+
+.zelos-renderer .blocklyInsertionMarker > .blocklyPathDark {
+  display: none;
+}
+
+/* Text styling for Zelos */
+.zelos-renderer .blocklyText {
+  fill: #fff;
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+  font-size: 11pt;
+  font-weight: 500;
+}
+
+.zelos-renderer .blocklyNonEditableText > text,
+.zelos-renderer .blocklyEditableText > text {
+  fill: #fff;
+}
+
+.zelos-renderer .blocklyDropdownText {
+  fill: #fff;
+}
+
+.zelos-renderer .blocklyIconShape {
+  fill: #fff;
+  fill-opacity: 0.6;
+  stroke: none;
+}
+
+.zelos-renderer .blocklyIconSymbol {
+  fill: #fff;
+}
+
+.zelos-renderer .blocklyButtonText {
+  fill: #fff;
+  font-family: "Helvetica Neue", "Segoe UI", Helvetica, sans-serif;
+  font-size: 12pt;
+  font-weight: 500;
+}
+
+/* Field styling for Zelos */
+.zelos-renderer .blocklyFieldSlider .blocklySliderTrack {
+  stroke: #c8c8c8;
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.zelos-renderer .blocklyFieldSlider .blocklySliderKnob {
+  fill: #fff;
+  stroke: #c8c8c8;
+  stroke-width: 4;
+  r: 8;
+}
+
+/* Connection styling for Zelos */
+.zelos-renderer .blocklyConnectionHighlight {
+  stroke: #4d90fe;
+  stroke-width: 4px;
+}
+
+/* Mutator styling for Zelos */
+.zelos-renderer .blocklyMutatorBackground {
+  fill: #fff;
+  stroke: #ddd;
+  stroke-width: 1;
+  fill-opacity: 0.9;
+}
+
+/* Comment styling for Zelos */
+.zelos-renderer .blocklyCommentTextarea {
+  background-color: #ffc;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 3px;
+  resize: none;
+  display: block;
+  text-overflow: hidden;
+}
+
+.zelos-renderer .blocklyCommentRect {
+  fill: #ffc;
+  stroke: #d4aa00;
+  stroke-width: 1px;
+}
+
+.zelos-renderer .blocklyCommentTarget {
+  fill: transparent;
+  stroke: #d4aa00;
+}
+
+.zelos-renderer .blocklyCommentHandleTarget {
+  fill: none;
+}
+
+.zelos-renderer .blocklyCommentHandle {
+  fill: #0000;
+}
+
+.zelos-renderer .blocklySelected > .blocklyCommentTarget {
+  stroke: #4d90fe;
+  stroke-width: 3px;
+}
+
+/* Flyout styling for Zelos */
+.zelos-renderer .blocklyFlyout {
+  fill: #f9f9f9;
+  fill-opacity: 0.95;
+}
+
+.zelos-renderer .blocklyFlyoutBackground {
+  fill: #f9f9f9;
+  fill-opacity: 0.95;
+}
+
+.zelos-renderer .blocklyFlyoutLabelText {
+  fill: #5b5b5b;
+}
+
+.zelos-renderer .blocklyFlyoutButton > .blocklyText {
+  fill: #5b5b5b;
+}
+
+/* Toolbox styling for Zelos */
+.zelos-renderer .blocklyTreeLabel {
+  color: #5b5b5b;
+}
