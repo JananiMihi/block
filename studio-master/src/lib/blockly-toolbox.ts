@@ -11,7 +11,7 @@
 // import 'blockly/blocks/procedures';
 
 export const defaultToolbox = {
-  kind: 'flyoutToolbox',
+  kind: 'categoryToolbox',
   contents: [
     {
       kind: 'category',
